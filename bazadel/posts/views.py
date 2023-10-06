@@ -4,6 +4,11 @@ from django.http import HttpResponse
 
 def index(request):
     template = 'posts/index.html'
+    return render(request, template)
+
+
+def service(request):
+    template = 'posts/service.html'
     return render(request, template) 
 
 
