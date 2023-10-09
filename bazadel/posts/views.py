@@ -17,6 +17,11 @@ def about(request):
     return render(request, template) 
 
 
+def learning(request):
+    template = 'posts/learning.html'
+    return render(request, template) 
+
+
 # Страница со списком мороженого
 def project_list(request):
     return HttpResponse('Список проектов')

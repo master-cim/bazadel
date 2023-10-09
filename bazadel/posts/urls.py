@@ -11,8 +11,8 @@ urlpatterns = [
     path('service/', views.service, name='service'),
     # Cтраница команды
     path('about/', views.about, name='about'),
-    # Страница со списком проектов
-    path('project/', views.project_list),
-    # Отдельная страница с информацией о проекте
-    path('project/<slug:slug>/', views.project_detail),
+    # Отдельная страница с информацией об услуге
+    path('service/<slug:slug>/', views.project_detail),
+    # Страница обучения
+    path('learning/', views.learning, name='learning'),
 ]
