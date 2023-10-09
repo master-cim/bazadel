@@ -9,6 +9,11 @@ def index(request):
 
 def service(request):
     template = 'posts/service.html'
+    return render(request, template)
+
+
+def about(request):
+    template = 'posts/about.html'
     return render(request, template) 
 
 
