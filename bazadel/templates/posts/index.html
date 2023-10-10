@@ -76,61 +76,7 @@
       <!-- About End -->
 
       {% include 'includes/services.html' %}
-
-
-
-      <!-- Project Start -->
-      <div class="container-fluid project py-5 mb-5">
-          <div class="container">
-              <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                  <h5 class="text-primary">Наши проекты</h5>
-                  <h1>Наши недавно выполненные проекты</h1>
-              </div>
-              <div class="row g-5">
-                  <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                      <div class="project-item">
-                          <div class="project-img">
-                              <img src="{% static 'img/project-1.jpg' %}" class="img-fluid w-100 rounded" alt="">
-                              <div class="project-content">
-                                  <a href="#" class="text-center">
-                                      <h4 class="text-secondary">Разработка веб-сайтов</h4>
-                                      <p class="m-0 text-white">Сайт конференции</p>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                      <div class="project-item">
-                          <div class="project-img">
-                              <img src="{% static 'img/project-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
-                              <div class="project-content">
-                                  <a href="#" class="text-center">
-                                      <h4 class="text-secondary">Разработка баз данных</h4>
-                                      <p class="m-0 text-white">Информационная система на PostgreSQL</p>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                      <div class="project-item">
-                          <div class="project-img">
-                              <img src="{% static 'img/project-3.jpg' %}" class="img-fluid w-100 rounded" alt="">
-                              <div class="project-content">
-                                  <a href="#" class="text-center">
-                                      <h4 class="text-secondary">Приложения для Telegram</h4>
-                                      <p class="m-0 text-white">Aiogram Telegram Bot</p>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- Project End -->
-
+      {% include 'includes/education.html' %}
       {% include 'includes/team.html' %}
 
       <!-- Testimonial Start -->
