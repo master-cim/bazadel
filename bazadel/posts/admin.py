@@ -73,7 +73,8 @@ class WorkflowAdmin(admin.ModelAdmin):
                     'start_date', 'end_date',
                     'process_mng')
     search_fields = ('prev_status',)
-    list_filter = ('status',  'project','start_date', 'end_date',
+    list_filter = ('status',  'project',
+                   'start_date', 'end_date',
                     'process_mng')
     empty_value_display = '-пусто-'
 
