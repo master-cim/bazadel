@@ -15,5 +15,5 @@ urlpatterns = [
     path('service/<slug:slug>/', views.project_detail),
     # Страница обучения
     path('learning/', views.learning, name='learning'),
-    path('order/', views.OrderView.as_view(), name='form_order'),
+    # path('order/', views.OrderView.as_view(), name='form_order'),
 ]
