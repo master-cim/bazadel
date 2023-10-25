@@ -57,48 +57,45 @@
           </div>
           <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
             <div class="p-5 rounded contact-form">
-
-                      {# Этот блок будет показан, если в форме есть ошибки #}
-                      {% if form.errors %}
-                      {% for field in form %}
-                      {% for error in field.errors %}
-                      <div class="alert alert-danger">
-                        {{ error|escape }}
-                      </div>
-                      {% endfor %}
-                      {% endfor %}
-                      {% for error in form.non_field_errors %}
-                      <div class="alert alert-danger">
-                        {{ error|escape }}
-                      </div>
-                      {% endfor %}
-                      {% endif %}
-                      <form method="post" class="form-floating">
-                        {% csrf_token %}
-                        {% for field in form %}
+              {# Этот блок будет показан, если в форме есть ошибки #}
+              {% if form.errors %}
+                {% for field in form %}
+                  {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                      {{ error|escape }}
+                    </div>
+                  {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                  <div class="alert alert-danger">
+                    {{ error|escape }}
+                  </div>
+                {% endfor %}
+              {% endif %}
+              <form method="post" class="form-floating">
+                {% csrf_token %}
+                {% for field in form %}
                         {% comment %} {% if field.field.required %}
                         <span class="required text-danger">*</span>
                         {% endif %} {% endcomment %}
-                        <div class="mb-4">
-                            {{ field }}
-                        </div>
-                        {% if field.help_text %}
-                        <small id="{{ field.id_for_label }}-help" class="form-text text-muted">
-                        {{ field.help_text|safe }}
-                        </small>
-                        {% endif %}
-                        {% endfor %}
-                        <div class="text-start">
-                          <button class="btn bg-primary text-white py-3 px-5" type="submit">Отправить сообщение</button>
-                        </div>
-                        <div class="border-top mt-4 pt-3">
-                          <p class="mb-0">
-                            Нажимая на кнопку, Вы принимаете <a href="{% static 'doc/police.pdf' %}" class="text-white">пользовательское соглашение</a> и соглашаетесь на обработку ваших персональных данных на условиях политики
+                  <div class="mb-4">
+                    {{ field }}
+                  </div>
+                  {% if field.help_text %}
+                    <small id="{{ field.id_for_label }}-help" class="form-text text-muted">
+                      {{ field.help_text|safe }}
+                    </small>
+                  {% endif %}
+                {% endfor %}
+                <div class="text-start">
+                  <button class="btn bg-primary text-white py-3 px-5" type="submit">Отправить сообщение</button>
+                </div>
+                <div class="border-top mt-4 pt-3">
+                  <p class="mb-0">Нажимая на кнопку, Вы принимаете <a href="{% static 'doc/police.pdf' %}" class="text-white">пользовательское соглашение</a> и соглашаетесь на обработку ваших персональных данных на условиях политики
                             конфиденциальности.
-                          </p>
-                        </div>
-                      </form>
-
+                  </p>
+                </div>
+              </form>
             </div><!--p-5 rounded contact-form-->
           </div><!--col-lg-6 wow fadeIn-->
         </div><!--row g-5-->
