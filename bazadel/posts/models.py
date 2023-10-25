@@ -55,13 +55,6 @@ class Status(models.Model):
 class Order(models.Model):
     author = models.CharField('Имя', max_length=100,
                               )
-    service = models.ForeignKey(
-        'Service',
-        on_delete=models.SET_NULL,
-        related_name='types',
-        null=True, blank=True,
-        verbose_name='Выберите вид услуги',
-    )
     text = models.TextField('Текст заявки',)
     phone_regex = RegexValidator(regex=r'^\+?7?\d{10}$', message="Телефонный номер должен быть введен в формате: '+799999999'. Допускается не более 11 цифр.")
     phone_number = models.CharField(verbose_name='Телефон', validators=[phone_regex], max_length=12,)

@@ -47,12 +47,12 @@ class ServiceAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'author', 'service',
+    list_display = ('pk', 'author', 
                     'text', 'phone_number', 'e_mail',
                     'pub_date',)
     search_fields = ('author', 'phone_number', 'e_mail',
                     'pub_date',)
-    list_filter = ('author', 'service', 'pub_date',)
+    list_filter = ('author', 'pub_date',)
     empty_value_display = '-пусто-'
 
 
