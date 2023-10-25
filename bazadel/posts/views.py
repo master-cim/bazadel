@@ -12,7 +12,7 @@ def index(request):
     template = 'posts/index.html'
     form = OrderForm(request.POST or None)
     if form.is_valid():
-        subject = "Пробное сообщение"
+        subject = "Заявка от пользователя сайта"
         body = {
                 'author': form.cleaned_data['author'],
                 'phone_number': form.cleaned_data['phone_number'],
