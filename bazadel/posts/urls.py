@@ -16,4 +16,5 @@ urlpatterns = [
     # Страница обучения
     path('learning/', views.learning, name='learning'),
     path('website/', views.website, name='website'),
+    path('database/', views.database, name='database'),
 ]
