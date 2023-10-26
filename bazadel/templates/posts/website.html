@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/factstart.html' %}
+
+        <!-- Page Header Start -->
+    <div class="container-fluid px-0 py-2">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'posts:index' %}" >Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'posts:service' %}" >Услуги</a></li>
+                <li class="breadcrumb-item" aria-current="page">Разработка веб-сайтов</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Page Header End -->
+
+        <!-- WebSite Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/webdisin-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/webdisin-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">
+                            Хотите увеличить своё онлайн-присутствие и привлечь больше потенциальных клиентов?
+                        </h5>
+                        <h1 class="mb-4">
+                            Веб-сайты, которые захватывают внимание и привлекают клиентов!
+                        </h1>
+                        <p> Мы здесь, чтобы помочь вам! Мы специализируемся на разработке веб-сайтов, которые не только красивы, но и эффективны.</p>
+                        <p class="mb-4">
+                            Наши профессионалы веб-разработки обладают богатым опытом и знаниями, чтобы создать уникальный и привлекательный дизайн, который отражает Вашу уникальность и ценности Вашего бренда. Мы уделяем особое внимание пользовательскому опыту, чтобы каждый посетитель Вашего сайта чувствовал себя комфортно и находил нужную информацию легко и быстро.
+                        </p>
+                        <p class="mb-4">
+                            Наша команда разработчиков использует самые современные технологии и инструменты, чтобы создать веб-сайт, который работает безупречно на всех устройствах – от компьютеров до смартфонов и планшетов. Мы также обеспечиваем оптимизацию для поисковых систем, чтобы Ваш сайт был легко найден и виден Вашей целевой аудиторией.
+                        </p>
+                        <p class="mb-4">
+                            Независимо от того, нужен Вам сайт-визитка, интернет-магазин или корпоративный портал, мы разработаем решение, которое отвечает вашим требованиям и ожиданиям. Мы также предлагаем дальнейшую поддержку и обслуживание Вашего веб-сайта, чтобы Вы могли сосредоточиться на своем бизнесе, не беспокоясь о технических аспектах.
+                        </p>
+                        <p class="mb-4">
+                            Развивайте свой бизнес вместе с нами! Свяжитесь с нами сегодня, чтобы обсудить Ваши потребности и начать создание Вашего уникального веб-сайта.
+                        </p>
+                    <h5 class="text-primary">
+                        Ваш успех – наша миссия!
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WebSite End -->
+{% include 'includes/form_order.html' %}
+
+{% endblock %} 

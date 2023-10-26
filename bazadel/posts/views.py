@@ -49,7 +49,36 @@ def about(request):
 
 def learning(request):
     template = 'posts/learning.html'
-    return render(request, template) 
+    return render(request, template)
+
+
+def website(request):
+    template = 'posts/website.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:service'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)
 
 
 # Страница со списком проектов
@@ -59,8 +88,8 @@ def project_list(request):
 
 # Страница с информацией об одном проекте;
 # view-функция принимает параметр pk из path()
-def project_detail(request, pk):
-    return HttpResponse(f'Проект {pk}')
+# def project_detail(request, pk):
+#     return HttpResponse(f'Проект {pk}')
 
 
 
