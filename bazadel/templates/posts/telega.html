@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/factstart.html' %}
+
+        <!-- Page Header Start -->
+    <div class="container-fluid px-0 py-2">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'posts:index' %}" >Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'posts:service' %}" >Услуги</a></li>
+                <li class="breadcrumb-item" aria-current="page">Приложения для Telegram</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Page Header End -->
+
+        <!-- WebSite Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/telega-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/telega-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">
+                            Вы хотите создать собственное приложение в Telegram, но не знаете, с чего начать? 
+                        </h5>
+                        <h1 class="mb-4">
+                            Создайте приложение в Telegram уже сегодня!
+                        </h1>
+                        <p> 
+                            Наша команда разработчиков специализируется на создании инновационных приложений для Telegram, которые помогут Вам улучшить взаимодействие со своими клиентами и укрепить Вашу позицию на рынке.
+                        </p>
+                        <p class="mb-4">
+                            Мы предлагаем полный цикл разработки, начиная от концепции и дизайна, до программирования и тестирования. Наш подход основан на глубоком понимании Ваших потребностей и бизнес-целей. Можем создать приложение, которое идеально соответствует вашим требованиям. 
+                        </p>
+                        <p class="mb-4">
+                            Наши разработчики обладают богатым опытом работы с Telegram API и знают все секреты создания мощных и функциональных приложений. Мы гарантируем высокое качество работы, соблюдение сроков и конфиденциальность Ваших данных.
+                        </p>
+                        <p class="mb-4">
+                            Приложения Telegram открывают перед Вами огромные возможности для улучшения коммуникации с Вашей аудиторией, повышения эффективности работы и увеличения прибыли. Не упускайте шанс быть впереди конкурентов и создайте свое собственное приложение в Telegram уже сегодня!
+                        </p>
+                        <p class="mb-4">
+                            Свяжитесь с нами прямо сейчас и начните развивать свой бизнес с помощью мощного и интуитивно понятного приложения Telegram.
+                        </p>
+                       
+                    <h5 class="text-primary">
+                        Звоните нам прямо сейчас и начните свой путь к Telegram!
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WebSite End -->
+{% include 'includes/form_order.html' %}
+
+{% endblock %} 

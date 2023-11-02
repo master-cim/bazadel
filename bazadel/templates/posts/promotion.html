@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/factstart.html' %}
+
+        <!-- Page Header Start -->
+    <div class="container-fluid px-0 py-2">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'posts:index' %}" >Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'posts:service' %}" >Услуги</a></li>
+                <li class="breadcrumb-item" aria-current="page">Продвижение</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Page Header End -->
+
+        <!-- WebSite Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/prom-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/prom-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">
+                            У Вас есть потрясающая идея для бизнеса, и мы знаем, как помочь Вам превратить ее в реальность.  
+                        </h5>
+                        <h1 class="mb-4">
+                            Хотите, чтобы Ваш сайт стал звездой в онлайн-мире? 
+                        </h1>
+                        <p> 
+                            Мы знаем, как это сделать! Наша команда профессионалов предлагает Вам комплексные услуги по продвижению сайтов, которые помогут Вам достичь новых высот в бизнесе.
+                        </p>
+                        <p class="mb-4">
+                            Мы не только создаем привлекательный дизайн и функциональность приложений, но и помогаем Вам разработать эффективные стратегии монетизации и продвижения. Мы учитываем особенности Вашего бизнеса и целевую аудиторию, чтобы создать приложение, которое будет максимально соответствовать вашим потребностям. 
+                        </p>
+                        <p class="mb-4">
+                            Мы используем передовые стратегии и технологии, чтобы Ваш сайт выделялся среди конкурентов. Мы проведем анализ Вашего сайта, чтобы определить его сильные и слабые стороны, и разработаем индивидуальную стратегию продвижения, которая будет соответствовать вашим целям и потребностям.
+                        </p>
+                        <p class="mb-4">
+                            Наша команда экспертов занимается оптимизацией сайта, созданием качественного контента, управлением рекламными кампаниями и работой с социальными сетями. Мы также обеспечим постоянный мониторинг и аналитику, чтобы Вы всегда были в курсе результатов нашей работы.
+                        </p>
+                        <p class="mb-4">
+                            Не упускайте возможность привлечь больше клиентов и увеличить свою прибыль. Доверьте нам продвижение Вашего сайта, и мы сделаем все возможное, чтобы выдвинуть Вас на первые строчки поисковых систем и привлечь целевую аудиторию.
+                        </p>
+                       
+                    <h5 class="text-primary">
+                        Свяжитесь с нами сегодня, и давайте вместе построим успешное будущее для Вашего бизнеса!
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WebSite End -->
+{% include 'includes/form_order.html' %}
+
+{% endblock %} 

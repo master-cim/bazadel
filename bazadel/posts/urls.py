@@ -17,4 +17,7 @@ urlpatterns = [
     path('learning/', views.learning, name='learning'),
     path('website/', views.website, name='website'),
     path('database/', views.database, name='database'),
+    path('telega/', views.telega, name='telega'),
+    path('prom/', views.promotion, name='promotion'),
+    path('analys/', views.analys, name='analys'),
 ]

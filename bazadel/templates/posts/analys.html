@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/factstart.html' %}
+
+        <!-- Page Header Start -->
+    <div class="container-fluid px-0 py-2">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'posts:index' %}" >Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'posts:service' %}" >Услуги</a></li>
+                <li class="breadcrumb-item" aria-current="page">Анализ данных</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Page Header End -->
+
+        <!-- WebSite Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/analys-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/analys-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">
+                            Вам нужны точные и надежные данные для принятия стратегических решений? Хотите улучшить свои продукты и увеличить прибыль?  
+                        </h5>
+                        <h1 class="mb-4">
+                            Мы предлагаем Вам услуги профессиональной аналитики данных и продуктового анализа!
+                        </h1>
+                        <p> 
+                            Наша команда экспертов в области аналитики данных обладает глубокими знаниями и многолетним опытом работы с различными бизнес-секторами. Мы готовы помочь Вам собрать, обработать и проанализировать большие объемы данных, чтобы Вы могли принимать обоснованные решения и достигать Ваших целей.
+                        </p>
+                        <p class="mb-4">
+                            Мы предлагаем широкий спектр услуг, включая:
+                            <ul>
+                                <li>Сбор и структурирование данных</li>
+                                <li>Анализ и интерпретация данных</li>
+                                <li>Прогнозирование рейтингов продаж/li>
+                                <li>Разработка планов оптимизации и улучшения размещения продуктов</li>
+                                <li>Мониторинг и отслеживание покупательской активности</li>
+                            </ul>    
+                        </p>
+                        <p class="mb-4">
+                            Наш подход основан на глубоком понимании Вашего бизнеса и его особенностей. Мы тщательно анализируем данные, чтобы выделить ключевые тренды, понять потребности Вашей целевой аудитории и предложить эффективные стратегии для достижения успеха.
+                        </p>
+                        <p class="mb-4">
+                            Не упускайте возможность превратить данные в ценную информацию и преимущество для Вашего бизнеса.
+                        </p>                      
+                    <h5 class="text-primary">
+                        Обратитесь к нам сегодня и доверьте нам анализ данных и продуктовый анализ, чтобы вырасти и преуспеть в своей отрасли.
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WebSite End -->
+{% include 'includes/form_order.html' %}
+
+{% endblock %} 

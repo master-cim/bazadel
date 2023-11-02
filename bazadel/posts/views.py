@@ -119,3 +119,89 @@ def database(request):
     }
     return render(request, template, context)
 
+
+def telega(request):
+    template = 'posts/telega.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:service'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)
+
+
+def promotion(request):
+    template = 'posts/promotion.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:service'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)
+
+
+def analys(request):
+    template = 'posts/analys.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:service'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)
