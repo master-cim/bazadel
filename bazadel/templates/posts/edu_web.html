@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/factstart.html' %}
+
+        <!-- Page Header Start -->
+    <div class="container-fluid px-0 py-2">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'posts:index' %}" >Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'posts:learning' %}" >Обучение</a></li>
+                <li class="breadcrumb-item" aria-current="page">Разработка веб-сайтов</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Page Header End -->
+
+        <!-- WebSite Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/eduweb-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/eduweb-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">
+                            Хотите освоить новую навык и создать свой собственный сайт, но не знаете, с чего начать? Мы предлагаем Вам уникальный курс повышения квалификации
+                        </h5>
+                        <h1 class="mb-4">
+                            Создай сайт своими руками за 72 ч!
+                        </h1>
+                        <p> Захватывающий курс, который позволит вам освоить все необходимые навыки и инструменты для создания профессионального сайта. Независимо от Вашего уровня подготовки, наш опытный преподавательский состав поможет Вам разобраться во всех аспектах создания и развития сайта.</p>
+                        <p class="mb-4">
+                            Что Вы получите, пройдя наш курс:
+                        </p>
+                        <ul>
+                            <li>Полное понимание процесса создания сайта: от выбора домена и хостинга до запуска и оптимизации.</li>
+                            <li>Основы дизайна и пользовательского опыта, чтобы Ваш сайт был не только функциональным, но и привлекательным для посетителей.</li>
+                            <li>Знания о различных платформах и инструментах для создания сайта, чтобы выбрать оптимальное решение для Ваших потребностей.</li>
+                            <li>Практические навыки по работе с HTML, CSS, JavaScript и другими языками программирования для создания интерактивных элементов на Вашем сайте.</li>
+                            <li>Секреты эффективного продвижения сайта в поисковых системах и социальных сетях, чтобы привлечь больше посетителей и потенциальных клиентов.</li>
+                        </ul>
+                        <p class="mb-4">
+                            Наш курс подходит как для начинающих, так и для опытных специалистов, которые хотят обновить свои знания и навыки в области веб-разработки. Мы предлагаем гибкий график обучения, чтобы Вы могли учиться в удобное для Вас время.
+                        </p>
+                        <p class="mb-4">
+                            Получите сертификат о прохождении курса и добавьте ценный актив к своему портфолио. Не упустите возможность стать востребованным специалистом в сфере веб-разработки!
+                        </p>
+                    <h5 class="text-primary">
+                        Регистрируйтесь на наш курс "Создай сайт своими руками за 72 часа" прямо сейчас и откройте для себя новые возможности в мире веб-разработки! 
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WebSite End -->
+{% include 'includes/form_order.html' %}
+
+{% endblock %} 

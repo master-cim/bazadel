@@ -205,3 +205,90 @@ def analys(request):
         'form': form,
     }
     return render(request, template, context)
+
+
+def eduweb(request):
+    template = 'posts/edu_web.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:learning'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)
+
+
+def edudb(request):
+    template = 'posts/edu_db.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:learning'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)
+
+
+def edutel(request):
+    template = 'posts/edu_tel.html'
+    form = OrderForm(request.POST or None)
+    if form.is_valid():
+        subject = "Заявка от пользователя сайта"
+        body = {
+                'author': form.cleaned_data['author'],
+                'phone_number': form.cleaned_data['phone_number'],
+                'e_mail': form.cleaned_data['e_mail'],
+                'text': form.cleaned_data['text'],
+            }
+        message = "\n".join(body.values())
+        try:
+            send_mail(subject, message, 
+                          settings.EMAIL_HOST_USER,
+                          ['basedeal@yandex.ru'])
+        except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+        form = form.save(commit=False)
+        form.save()
+        return HttpResponseRedirect(reverse_lazy('posts:learning'))
+
+    context = {
+        # ...,
+        'form': form,
+    }
+    return render(request, template, context)

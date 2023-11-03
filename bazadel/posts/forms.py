@@ -10,7 +10,7 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = ('author', 'text', 'phone_number', 'e_mail',)
         widgets = {
-            'text': Textarea(attrs={'style': 'width: 100%;', 'rows': 5, 'placeholder': 'ЗАДАЧА'},),
+            'text': Textarea(attrs={'style': 'width: 100%;', 'rows': 5, 'placeholder': 'ЗАДАЧА | КУРС ПОВЫШЕНИЯ КВАЛИФИКАЦИИ'},),
             'e_mail': EmailInput(attrs={'style': 'width: 100%;', 'placeholder': 'test@example.com'}),
             'phone_number': TextInput(attrs={'style': 'width: 100%;', 'placeholder': '+79785558989'}),
             'author': TextInput(attrs={'style': 'width: 100%;', 'placeholder': 'ИМЯ'}),          

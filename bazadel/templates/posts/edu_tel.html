@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'includes/factstart.html' %}
+
+        <!-- Page Header Start -->
+    <div class="container-fluid px-0 py-2">
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'posts:index' %}" >Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'posts:learning' %}" >Обучение</a></li>
+                <li class="breadcrumb-item" aria-current="page">Разработка веб-сайтов</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Page Header End -->
+
+        <!-- WebSite Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/edutel-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/edutel-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">
+                            Хотите научиться программировать на Python и создавать уникальные приложения для Telegram? Присоединяйтесь к нашему курсу 
+                        </h5>
+                        <h1 class="mb-4">
+                            Python и разработка приложений для Telegram!
+                        </h1>
+                        <p> Захватывающий мир программирования и разработки приложений ждет вас! Научитесь создавать функциональные и интерактивные боты для Telegram с помощью мощной библиотеки Aiogram. Благодаря этому курсу Вы сможете воплотить свои идеи в жизнь и создать собственные уникальные приложения для Telegram.
+
+                        </p>
+                        <p>    Что Вы получите, пройдя наш курс? Во-первых, Вы освоите язык программирования Python, который является одним из самых популярных и востребованных в мире. Вы научитесь писать эффективный и чистый код, а также использовать различные инструменты и библиотеки для разработки приложений.
+                        </p>
+                        <p>    Во-вторых, Вы изучите библиотеку Aiogram - мощный инструмент для создания ботов для Telegram. Вы узнаете, как создавать и настраивать ботов, как обрабатывать сообщения и команды пользователей, а также как взаимодействовать с API Telegram.
+                        </p>
+                        <p class="mb-4">
+                            Что Вы получите, пройдя наш курс:
+                        </p>
+                        
+                        <p class="mb-4">
+                            Наш курс предлагает практический подход к обучению. Вы будете решать реальные задачи и создавать свои собственные проекты. Наши опытные преподаватели будут поддерживать Вас на каждом шагу и помогут разобраться в тонкостях разработки приложений для Telegram.
+                        </p>
+                        <p class="mb-4">
+                            Получите сертификат о прохождении курса и добавьте ценный актив к своему портфолио. Не упустите возможность стать востребованным специалистом в области разработки приложений для Telegram.
+                        </p>
+                    <h5 class="text-primary">
+                         Регистрируйтесь на наш курс "Python и разработка приложений для Telegram с помощью Aiogram" прямо сейчас и откройте для себя новые горизонты в программировании!
+                    </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WebSite End -->
+{% include 'includes/form_order.html' %}
+
+{% endblock %} 

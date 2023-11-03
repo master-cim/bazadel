@@ -20,4 +20,7 @@ urlpatterns = [
     path('telega/', views.telega, name='telega'),
     path('prom/', views.promotion, name='promotion'),
     path('analys/', views.analys, name='analys'),
+    path('learning/eduweb', views.eduweb, name='eduweb'),
+    path('learning/edudb', views.edudb, name='edudb'),
+    path('learning/edutel', views.edutel, name='edutel'),
 ]
