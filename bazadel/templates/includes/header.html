@@ -10,8 +10,8 @@
             <div class="container">
                 <div class="d-flex justify-content-between topbar">
                     <div class="top-info">
-                        <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a> Севастополь, ул. Университетская, 31</small>
-                        <small class="me-3 text-white-50"><a href="#"><i class="fas fa-envelope me-2 text-secondary"></i></a>basedeal@yandex.ru</small>
+                        <small class="me-3 text-white-50"><a href="{% url 'posts:index' %}#nav_order"><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a> Севастополь, ул. Университетская, 31</small>
+                        <small class="me-3 text-white-50"><a href="{% url 'posts:index' %}#nav_order"><i class="fas fa-envelope me-2 text-secondary"></i></a>basedeal@yandex.ru</small>
                     </div>
                    
                     <div class="top-link">
@@ -28,7 +28,7 @@
         <div class="container-fluid px-0 bg-primary">
             <div class="container">
                 <nav class="navbar navbar-dark navbar-expand-lg py-0">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="{% url 'posts:index' %}" class="navbar-brand">
                         <h1 class="text-white fw-bold d-block">База<span class="text-secondary">Дел</span> </h1>
                     </a>
                     <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -40,7 +40,6 @@
                             <a href="{% url 'posts:about' %}" class="nav-item nav-link">О компании</a>
                             <a href="{% url 'posts:service' %}" class="nav-item nav-link">Услуги</a>
                             <a href="{% url 'posts:learning' %}" class="nav-item nav-link">Обучение</a>
-                            <a href="#nav_order" class="nav-item nav-link">Контакты</a>
                         </div>
                     </div>
                     <div class="d-none d-xl-flex flex-shirink-0">
@@ -57,7 +56,7 @@
                             <span class="text-secondary">Звоните: + 7 978 572 93 71</span>
                         </div>
                         <div class="d-flex align-items-center justify-content-center ms-4 ">
-                            <a href="#"><i class="bi bi-search text-white fa-2x"></i> </a>
+                            <a href="{% url 'posts:index' %}#nav_order"><i class="bi bi-search text-white fa-2x"></i> </a>
                         </div>
                     </div>
                 </nav>
