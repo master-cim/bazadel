@@ -12,7 +12,9 @@
                 <li class="breadcrumb-item"><a href="{% url 'posts:learning' %}" >Обучение</a></li>
                 <li class="breadcrumb-item" aria-current="page">Разработка веб-сайтов</li>
             </ol>
+            
         </nav>
+        
     </div>
     <!-- Page Header End -->
 
@@ -27,11 +29,12 @@
                                 <img src="{% static 'img/edudb-2.jpg' %}" class="img-fluid w-100 rounded" alt="">
                             </div>
                         </div>
-                    </div>
+                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
                         <h5 class="text-primary">
                             Захватите контроль над данными и создайте свою собственную базу данных с нашим курсом повышения квалификации
                         </h5>
+                        <a href="{% url 'posts:index' %}#nav_order" class="ms-2"><button type="button" class="px-0 py-sm-3 px-sm-5 btn btn-primary rounded-pill">Зарегистрироваться на курс</button></a>
                         <h1 class="mb-4">
                             Информационная система на PostgreSQL!
                         </h1>
