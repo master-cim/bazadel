@@ -1,11 +1,10 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.urls import reverse_lazy
-from .forms import OrderForm
-from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse_lazy
 
+from .forms import OrderForm
 
 
 def index(request):
@@ -21,15 +20,14 @@ def index(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:service'))
-
     context = {
         # ...,
         'form': form,
@@ -44,7 +42,7 @@ def service(request):
 
 def about(request):
     template = 'posts/about.html'
-    return render(request, template) 
+    return render(request, template)
 
 
 def learning(request):
@@ -65,15 +63,14 @@ def website(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:service'))
-
     context = {
         # ...,
         'form': form,
@@ -104,11 +101,11 @@ def database(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:service'))
@@ -133,11 +130,11 @@ def telega(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:service'))
@@ -162,11 +159,11 @@ def promotion(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:service'))
@@ -191,11 +188,11 @@ def analys(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:service'))
@@ -220,15 +217,14 @@ def eduweb(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:learning'))
-
     context = {
         # ...,
         'form': form,
@@ -249,11 +245,11 @@ def edudb(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:learning'))
@@ -278,15 +274,14 @@ def edutel(request):
             }
         message = "\n".join(body.values())
         try:
-            send_mail(subject, message, 
-                          settings.EMAIL_HOST_USER,
-                          ['basedeal@yandex.ru'])
+            send_mail(subject, message,
+                      settings.EMAIL_HOST_USER,
+                      ['basedeal@yandex.ru'])
         except BadHeaderError:
-                return HttpResponse('Найден некорректный заголовок')
+            return HttpResponse('Найден некорректный заголовок')
         form = form.save(commit=False)
         form.save()
         return HttpResponseRedirect(reverse_lazy('posts:learning'))
-
     context = {
         # ...,
         'form': form,

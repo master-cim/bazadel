@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
-from .models import Service, Status, Order, Project, Workflow
+from .models import Order, Project, Service, Status, Workflow
 
 admin.site.unregister(User)
 
@@ -47,11 +47,11 @@ class ServiceAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'author', 
+    list_display = ('pk', 'author',
                     'text', 'phone_number', 'e_mail',
                     'pub_date',)
     search_fields = ('author', 'phone_number', 'e_mail',
-                    'pub_date',)
+                     'pub_date',)
     list_filter = ('author', 'pub_date',)
     empty_value_display = '-пусто-'
 
@@ -84,7 +84,6 @@ class ProjectAdmin(admin.ModelAdmin):
         MembershipInline,
     ]
     exclude = ('status',)
-
 
 
 admin.site.register(Service, ServiceAdmin)
